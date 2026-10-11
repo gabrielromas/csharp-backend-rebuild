@@ -1,11 +1,12 @@
+
 public class Customer
 {
-    public string Nume { get; set; }
+    public string Name { get; set; }
     public string Email { get; set; }
 
-    public Customer(string nume, string email)
+    public Customer(string name, string email)
     {
-        Nume = nume;
+        Name = name;
         Email = email;
     }
 }

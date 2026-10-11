@@ -1,20 +1,21 @@
+
 public class Product
 {
-    public string Nume { get; set; }
-    public decimal Pret { get; set; }
-    public bool Disponibil { get; set; }
+    public string Name { get; set; }
+    public decimal Price { get; set; }
+    public bool IsAvailable { get; set; }
 
-    private string codIntern = "ABC123";
+    private string internalCode = "ABC123";
 
-    public Product(string nume, decimal pret, bool disponibil)
+    public Product(string name, decimal price, bool isAvailable)
     {
-        Nume = nume;
-        Pret = pret;
-        Disponibil = disponibil;
+        Name = name;
+        Price = price;
+        IsAvailable = isAvailable;
     }
 
-    public string GetCodIntern()
+    public string GetInternalCode()
     {
-        return codIntern;
+        return internalCode;
     }
 }
