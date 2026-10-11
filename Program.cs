@@ -55,140 +55,190 @@
 // // Console.WriteLine($"Product: {order.Product.Nume}");
 // // Console.WriteLine($"Price: {order.Product.Pret}");
 
-    // INotificationService emailNotificationService = new EmailNotificationService();
-    // INotificationService smsNotificationService = new SmsNotificationService();
+// INotificationService emailNotificationService = new EmailNotificationService();
+// INotificationService smsNotificationService = new SmsNotificationService();
 
-    // emailNotificationService.Send("Salut din C#");
-    // smsNotificationService.Send("Salut din C#");
+// emailNotificationService.Send("Salut din C#");
+// smsNotificationService.Send("Salut din C#");
 
-    // INotificationService emailService = new EmailNotificationService();
-    // OrderService orderService = new OrderService(emailService);
-    // orderService.CreateOrder();
+// INotificationService emailService = new EmailNotificationService();
+// OrderService orderService = new OrderService(emailService);
+// orderService.CreateOrder();
 
-    // IPaymentService payment = new CreditCardPayment();
-    // IPaymentService payment1 = new PayPalPayment();
+// IPaymentService payment = new CreditCardPayment();
+// IPaymentService payment1 = new PayPalPayment();
 
-    // payment.Pay(100);
-    // payment1.Pay(100);
+// payment.Pay(100);
+// payment1.Pay(100);
 
-    // IPaymentService creditCard = new CreditCardPayment();
-    // PaymentService paymentService = new PaymentService(creditCard);
-    // paymentService.ProcessPayment(25);
+// IPaymentService creditCard = new CreditCardPayment();
+// PaymentService paymentService = new PaymentService(creditCard);
+// paymentService.ProcessPayment(25);
 
-    // List<string> produse = new List<string>();
+// List<string> produse = new List<string>();
 
-    // produse.Add("Laptop");
-    // produse.Add("Mouse");
-    // produse.Add("Tastatura");
+// produse.Add("Laptop");
+// produse.Add("Mouse");
+// produse.Add("Tastatura");
 
-    // foreach (string produs in produse)
+// foreach (string produs in produse)
+// {
+//     Console.WriteLine(produs);
+// }
+
+//List<Product> produse = new List<Product>();
+
+// produse.Add(new Product("Laptop", 4500, true));
+// produse.Add(new Product("Mouse", 150, true));
+// produse.Add(new Product("Tastatura", 300, false));
+
+// foreach (Product produs in produse)
+// {
+//     Console.WriteLine($"{produs.Nume} - {produs.Pret} lei");
+// }
+
+// Console.WriteLine($"Numar produse: {produse.Count}");
+// Console.WriteLine($"Primul produs: {produse[0].Nume}");
+
+// Dictionary<int, Product> produse = new Dictionary<int, Product>();
+
+// produse.Add(1, new Product("Laptop", 4500, true));
+// produse.Add(2, new Product("Mouse", 150, true));
+// produse.Add(3, new Product("Tastatura", 300, false));
+
+// if (produse.TryGetValue(10, out Product? produs))
+// {
+//     Console.WriteLine($"{produs.Nume} - {produs.Pret} lei");
+// }
+// else
+// {
+//     Console.WriteLine("Produsul nu exista.");
+// }
+
+// HashSet<string> categorii = new HashSet<string>();
+
+// categorii.Add("Electronice");
+// categorii.Add("Laptopuri");
+// categorii.Add("Electronice");
+
+// foreach (string categorie in categorii)
+// {
+//     Console.WriteLine(categorie);
+// }
+
+// List<Product> produse = new List<Product>
+// {
+//     new Product("Laptop", 4500, true),
+//     new Product("Mouse", 150, true),
+//     new Product("Tastatura", 300, false)
+// };
+
+// var produseScumpe = produse.Where(p => p.Pret > 200);
+// foreach (Product produs in produseScumpe)
+// {
+//     Console.WriteLine(produs.Nume);
+// }
+
+// var numeProduse = produse.Select(p => p.Nume);
+
+// foreach (string nume in numeProduse)
+// {
+//     Console.WriteLine(nume);
+// }
+
+// var rezultat = produse
+// .Where(p => p.Pret > 200)
+// .Select(p => p.Nume);
+
+// var produs = produse.FirstOrDefault(p => p.Pret >200);
+
+// if (produs != null)
+// {
+//     Console.WriteLine($"{produs.Nume} - {produs.Pret} lei");
+// }
+// else
+// {
+// Console.WriteLine("Nu exista un produs mai mareS de 200 lei.");
+// }
+
+// bool existaProdusScump = produse.Any(p => p.Pret > 5000);
+
+// Console.WriteLine(existaProdusScump);
+
+// var produseSortate = produse.OrderBy(p => p.Pret);
+// foreach (var p in produseSortate)
+// {
+//     Console.WriteLine(p.Nume + " - " + p.Pret);
+// }
+
+
+// List<Product> produse = new List<Product>
+// {
+//     new Product("Laptop", 4500, true),
+//     new Product("Mouse", 150, true),
+//     new Product("Tastatura", 300, false),
+//     new Product("Monitor", 1200, true)
+// };
+
+// var produs = produse
+//                 .Where(p => p.Pret > 500) 
+//                 .OrderByDescending(p => p.Pret)
+//                 .Select(p => p.Nume);
+
+// foreach(var p in produs)
+// {
+//     Console.WriteLine(p);
+// } 
+
+    // try
     // {
-    //     Console.WriteLine(produs);
+    //     int a = 10;
+    //     int b = 0;
+
+    //     int rezultat = a / b;
+
+    //     Console.WriteLine(rezultat);
     // }
-
-    //List<Product> produse = new List<Product>();
-
-    // produse.Add(new Product("Laptop", 4500, true));
-    // produse.Add(new Product("Mouse", 150, true));
-    // produse.Add(new Product("Tastatura", 300, false));
-
-    // foreach (Product produs in produse)
+    // catch (DivideByZeroException)
     // {
-    //     Console.WriteLine($"{produs.Nume} - {produs.Pret} lei");
-    // }
+    //     Console.WriteLine("Nu putem imparti la zero.");
+    // }   
 
-    // Console.WriteLine($"Numar produse: {produse.Count}");
-    // Console.WriteLine($"Primul produs: {produse[0].Nume}");
+    // int? varsta = 25;
 
-    // Dictionary<int, Product> produse = new Dictionary<int, Product>();
-
-    // produse.Add(1, new Product("Laptop", 4500, true));
-    // produse.Add(2, new Product("Mouse", 150, true));
-    // produse.Add(3, new Product("Tastatura", 300, false));
-
-    // if (produse.TryGetValue(10, out Product? produs))
+    // if (varsta.HasValue)
     // {
-    //     Console.WriteLine($"{produs.Nume} - {produs.Pret} lei");
+    //     Console.WriteLine($"Varsta este {varsta.Value}");
     // }
     // else
     // {
-    //     Console.WriteLine("Produsul nu exista.");
+    //     Console.WriteLine("Varsta nu este specificata.");
+    // }
+    
+
+    // S
+    // object valoare = "Salut";
+
+    // if(valoare is string sirDeNumere)
+    // {
+    //     Console.WriteLine("Este sir de numere: " + sirDeNumere);   
+    // }
+    // static async Task<int> ObtineNumarAsync()
+    // {
+    //     await Task.Delay(1000);
+    //     return 42;
     // }
 
-    // HashSet<string> categorii = new HashSet<string>();
-
-    // categorii.Add("Electronice");
-    // categorii.Add("Laptopuri");
-    // categorii.Add("Electronice");
-
-    // foreach (string categorie in categorii)
-    // {
-    //     Console.WriteLine(categorie);
-    // }
-
-    // List<Product> produse = new List<Product>
-    // {
-    //     new Product("Laptop", 4500, true),
-    //     new Product("Mouse", 150, true),
-    //     new Product("Tastatura", 300, false)
-    // };
-
-    // var produseScumpe = produse.Where(p => p.Pret > 200);
-    // foreach (Product produs in produseScumpe)
-    // {
-    //     Console.WriteLine(produs.Nume);
-    // }
-
-    // var numeProduse = produse.Select(p => p.Nume);
-
-    // foreach (string nume in numeProduse)
-    // {
-    //     Console.WriteLine(nume);
-    // }
-
-    // var rezultat = produse
-    // .Where(p => p.Pret > 200)
-    // .Select(p => p.Nume);
-
-    // var produs = produse.FirstOrDefault(p => p.Pret >200);
-
-    // if (produs != null)
-    // {
-    //     Console.WriteLine($"{produs.Nume} - {produs.Pret} lei");
-    // }
-    // else
-    // {
-    // Console.WriteLine("Nu exista un produs mai mareS de 200 lei.");
-    // }
-
-    // bool existaProdusScump = produse.Any(p => p.Pret > 5000);
-
-    // Console.WriteLine(existaProdusScump);
-
-    // var produseSortate = produse.OrderBy(p => p.Pret);
-    // foreach (var p in produseSortate)
-    // {
-    //     Console.WriteLine(p.Nume + " - " + p.Pret);
-    // }
-
-
-    List<Product> produse = new List<Product>
+    // int numar = await ObtineNumarAsync();
+    // Console.WriteLine(numar);
+    static async Task<Product> ObtineProdusAsync()
     {
-        new Product("Laptop", 4500, true),
-        new Product("Mouse", 150, true),
-        new Product("Tastatura", 300, false),
-        new Product("Monitor", 1200, true)
-    };
+    // Simulăm citirea din baza de date
+    await Task.Delay(1000);
 
-    var produs = produse
-                    .Where(p => p.Pret > 500) 
-                    .OrderByDescending(p => p.Pret)
-                    .Select(p => p.Nume);
+    return new Product("Laptop", 3500m, true);
+    }
 
-    foreach(var p in produs)
-    {
-        Console.WriteLine(p);
-    } 
+    Product produs = await ObtineProdusAsync();
 
-
-                
+    Console.WriteLine(produs);
